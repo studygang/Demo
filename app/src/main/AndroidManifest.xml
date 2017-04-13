@@ -31,6 +31,8 @@
 
         <activity android:name=".SecondActivity">
         </activity>
+        <activity android:name=".FirstActivity">
+        </activity>
     </application>
 
 </manifest>

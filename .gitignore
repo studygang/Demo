@@ -7,3 +7,8 @@
 /build
 /captures
 .externalNativeBuild
+app/libs/
+app/src/main/java/com/gangzi/demo/model/
+app/src/main/res/drawable-hdpi-v4/
+app/src/main/res/drawable-xhdpi-v4/
+app/src/main/res/drawable/

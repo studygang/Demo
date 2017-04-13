@@ -8,17 +8,42 @@
     android:orientation="vertical"
     tools:context="com.gangzi.demo.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycle"
+    <FrameLayout
+        android:id="@+id/content_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+    </FrameLayout>
 
-    </android.support.v7.widget.RecyclerView>
-<android.support.design.widget.FloatingActionButton
-    android:id="@+id/bt_float"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@mipmap/ic_launcher"
-    android:layout_gravity="bottom|right"/>
+    <RadioGroup
+        android:id="@+id/rp_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+           android:id="@+id/home"
+           style="@style/MainButtonStyle"
+           android:drawableTop="@drawable/home_button_selector"
+           android:text="首页"
+            />
+        <RadioButton
+            android:id="@+id/life"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/life_button_selector"
+            android:text="生活"
+            />
+        <RadioButton
+            android:id="@+id/shop"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/shop_button_selector"
+            android:text="商城"
+            />
+        <RadioButton
+            android:id="@+id/me"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/me_button_selector"
+            android:text="我"
+            />
+    </RadioGroup>
+
 </LinearLayout>

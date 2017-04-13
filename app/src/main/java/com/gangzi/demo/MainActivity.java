@@ -1,43 +1,115 @@
 package com.gangzi.demo;
 
 import android.content.Intent;
+import android.support.annotation.IdRes;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.RadioGroup;
 
 import com.gangzi.demo.adapter.RecycleAdapter;
+import com.gangzi.demo.base.BaseFragment;
+import com.gangzi.demo.fragment.HomeFragment;
+import com.gangzi.demo.fragment.LifeFragment;
+import com.gangzi.demo.fragment.PersonFragment;
+import com.gangzi.demo.fragment.ShopFragment;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
 
-    private RecyclerView mRecyclerView;
-    private FloatingActionButton bt_floatButton;
-    private RecycleAdapter mAdapter;
-    private int[]image=new int[]{R.drawable.watermelon,R.drawable.banana,R.drawable.cherry,R.drawable.grape
-                                ,R.drawable.mango,R.drawable.pear,R.drawable.pineapple,R.drawable.orange,R.drawable.strawberry};
+public class MainActivity extends FragmentActivity {
+
+    private RadioGroup rp_main;
+    private List<BaseFragment>mFragments;
+    private int position;
+    private Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mRecyclerView= (RecyclerView) findViewById(R.id.recycle);
-        mAdapter=new RecycleAdapter(MainActivity.this,image);
-        LinearLayoutManager manager=new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
-        mRecyclerView.setLayoutManager(manager);
-        mRecyclerView.setAdapter(mAdapter);
-        bt_floatButton= (FloatingActionButton) findViewById(R.id.bt_float);
-        bt_floatButton.setOnClickListener(new View.OnClickListener() {
+        initView();
+        initFragment();
+        initClickListener();
+    }
+
+    private void initView() {
+        rp_main= (RadioGroup) findViewById(R.id.rp_main);
+    }
+
+    private void initFragment() {
+        mFragments=new ArrayList<BaseFragment>();
+        HomeFragment homeFragment=new HomeFragment();
+        LifeFragment lifeFragment=new LifeFragment();
+        ShopFragment shopFragment=new ShopFragment();
+        PersonFragment personFragment=new PersonFragment();
+        mFragments.add(homeFragment);
+        mFragments.add(lifeFragment);
+        mFragments.add(shopFragment);
+        mFragments.add(personFragment);
+    }
+    private void initClickListener() {
+        rp_main.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,SecondActivity.class));
+            public void onCheckedChanged(RadioGroup group, @IdRes int i) {
+                switch (i){
+                    case R.id.home:
+                        position=0;
+                        break;
+                    case R.id.life:
+                        position=1;
+                        break;
+                    case R.id.shop:
+                        position=2;
+                        break;
+                    case R.id.me:
+                        position=3;
+                        break;
+                    default:
+                        position=0;
+                        break;
+                }
+                BaseFragment toFragment= getFragment(position);
+                switchFragment(fragment,toFragment);
             }
         });
-        initData();
+        rp_main.check(R.id.home);
     }
 
-    private void initData() {
-
+    private void switchFragment(Fragment fragment, BaseFragment fragment1) {
+        if (fragment!=fragment1){
+            FragmentManager fm=getSupportFragmentManager();
+            FragmentTransaction fr=fm.beginTransaction();
+            fragment=fragment1;
+            if (fragment1!=null){
+                if (!fragment1.isAdded()){
+                    if (fragment!=null){
+                        fr.hide(fragment);
+                    }
+                    fr.add(R.id.content_layout,fragment1);
+                }else{
+                    if (fragment!=null){
+                        fr.hide(fragment);
+                    }
+                    fr.show(fragment1).commit();
+                }
+            }
+        }
     }
+
+    private BaseFragment getFragment(int position) {
+        if (mFragments!=null&&mFragments.size()>0){
+            return  mFragments.get(position);
+        }
+       return  null;
+    }
+
+
 }
