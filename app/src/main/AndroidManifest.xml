@@ -39,6 +39,8 @@
         </activity>
         <activity android:name=".activity.FileActivity">
         </activity>
+        <activity android:name=".activity.StreamActivity">
+        </activity>
     </application>
 
 </manifest>

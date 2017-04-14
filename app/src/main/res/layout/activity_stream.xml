@@ -6,24 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.gangzi.demo.activity.FileActivity">
-    <TextView
-        android:id="@+id/tv_text"
-        android:layout_marginTop="15dp"
+    tools:context="com.gangzi.demo.activity.StreamActivity">
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/bt_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="录音记录"/>
+        android:text="开始"/>
     <Button
-        android:id="@+id/bt_startSay"
-        android:layout_marginTop="70dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="按住说话"/>
-    <Button
-        android:id="@+id/bt_play"
-        android:layout_marginTop="70dp"
+        android:id="@+id/bt_streamPlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="播放"/>
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
