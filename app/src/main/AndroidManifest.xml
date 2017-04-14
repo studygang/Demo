@@ -41,6 +41,10 @@
         </activity>
         <activity android:name=".activity.StreamActivity">
         </activity>
+        <activity android:name=".activity.VideoPlayActivity">
+        </activity>
+        <activity android:name=".activity.YoudaoQueryActivity">
+        </activity>
     </application>
 
 </manifest>

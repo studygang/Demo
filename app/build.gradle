@@ -87,4 +87,5 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.0.1'
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile files('libs/gson-2.3.1.jar')
 }
