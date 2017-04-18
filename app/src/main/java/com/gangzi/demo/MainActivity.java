@@ -29,7 +29,7 @@ public class MainActivity extends FragmentActivity {
     private RadioGroup rp_main;
     private List<BaseFragment>mFragments;
     private int position;
-    private Fragment fragment;
+    private BaseFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,22 +83,22 @@ public class MainActivity extends FragmentActivity {
         rp_main.check(R.id.home);
     }
 
-    private void switchFragment(Fragment fragment, BaseFragment fragment1) {
-        if (fragment!=fragment1){
+    private void switchFragment(Fragment fromFragment, BaseFragment nextFragment) {
+        if (fragment!=nextFragment){
             FragmentManager fm=getSupportFragmentManager();
             FragmentTransaction fr=fm.beginTransaction();
-            fragment=fragment1;
-            if (fragment1!=null){
-                if (!fragment1.isAdded()){
-                    if (fragment!=null){
-                        fr.hide(fragment);
+            fragment=nextFragment;
+            if (nextFragment!=null){
+                if (!nextFragment.isAdded()){
+                    if (fromFragment!=null){
+                        fr.hide(fromFragment);
                     }
-                    fr.add(R.id.content_layout,fragment1);
+                    fr.add(R.id.content_layout,nextFragment).commit();
                 }else{
-                    if (fragment!=null){
-                        fr.hide(fragment);
+                    if (fromFragment!=null){
+                        fr.hide(fromFragment);
                     }
-                    fr.show(fragment1).commit();
+                    fr.show(nextFragment).commit();
                 }
             }
         }
