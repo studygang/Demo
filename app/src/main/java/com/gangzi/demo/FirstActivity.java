@@ -9,8 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.gangzi.demo.adapter.RecycleAdapter;
+import com.zhy.autolayout.AutoLayoutActivity;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends AutoLayoutActivity {
 
     private RecyclerView mRecyclerView;
     private FloatingActionButton bt_floatButton;

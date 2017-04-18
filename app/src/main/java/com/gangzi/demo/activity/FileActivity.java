@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gangzi.demo.R;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +27,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class FileActivity extends AppCompatActivity {
+public class FileActivity extends AutoLayoutActivity {
 
     @BindView(R.id.bt_startSay)
     Button bt_startSay;

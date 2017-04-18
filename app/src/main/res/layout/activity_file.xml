@@ -9,19 +9,19 @@
     tools:context="com.gangzi.demo.activity.FileActivity">
     <TextView
         android:id="@+id/tv_text"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="15px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="录音记录"/>
     <Button
         android:id="@+id/bt_startSay"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="70px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="按住说话"/>
     <Button
         android:id="@+id/bt_play"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="70px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="播放"/>

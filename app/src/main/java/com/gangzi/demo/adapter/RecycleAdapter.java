@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.gangzi.demo.R;
+import com.zhy.autolayout.utils.AutoUtils;
 
 /**
  * Created by Administrator on 2017/4/12.
@@ -54,6 +55,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
 
         public ViewHolder(View itemView) {
             super(itemView);
+            AutoUtils.autoSize(itemView);
             mImageView= (ImageView) itemView.findViewById(R.id.image);
             tv_title= (TextView) itemView.findViewById(R.id.tv_text);
         }
