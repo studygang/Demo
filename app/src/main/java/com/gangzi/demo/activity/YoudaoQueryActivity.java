@@ -78,7 +78,7 @@ public class YoudaoQueryActivity extends AppCompatActivity {
             tv_show.setText("translation:"+translate+",");
         }
         //转换成列表类型
-        List<YoudaoEntity>youdaos=gson.fromJson(response, new TypeToken<List<YoudaoEntity>>(){}.getType());
+      //  List<YoudaoEntity>youdaos=gson.fromJson(response, new TypeToken<List<YoudaoEntity>>(){}.getType());
     }
 
 }
