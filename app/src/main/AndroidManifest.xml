@@ -8,6 +8,9 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera2"/>
 
     <application
         android:allowBackup="true"
@@ -31,11 +34,11 @@
             android:name="UMENG_CHANNEL"
             android:value="${UMENG_CHANNEL_VALUE}"/>
 
-        <activity android:name=".SecondActivity">
+        <activity android:name=".activity.SecondActivity">
         </activity>
-        <activity android:name=".FirstActivity">
+        <activity android:name=".activity.FirstActivity">
         </activity>
-        <activity android:name=".VoiceActivity">
+        <activity android:name=".activity.VoiceActivity">
         </activity>
         <activity android:name=".activity.FileActivity">
         </activity>
@@ -46,8 +49,22 @@
         <activity android:name=".activity.YoudaoQueryActivity">
         </activity>
 
-        <meta-data android:name="design_width" android:value="768"></meta-data>
-        <meta-data android:name="design_height" android:value="1280"></meta-data>
+        <service android:name=".service.VoiceService"/>
+
+        <meta-data
+            android:name="design_width"
+            android:value="768"/>
+        <meta-data
+            android:name="design_height"
+            android:value="1280"/>
+
+        <activity android:name=".activity.SurfaceVideoActivity">
+        </activity>
+        <activity android:name=".activity.CameraActivity">
+        </activity>
+        <activity android:name=".activity.SurfaceCameraActivity"
+            android:screenOrientation="landscape">
+        </activity>
     </application>
 
 </manifest>

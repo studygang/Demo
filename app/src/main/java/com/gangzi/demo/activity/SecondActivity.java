@@ -1,4 +1,4 @@
-package com.gangzi.demo;
+package com.gangzi.demo.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.gangzi.demo.R;
 import com.gangzi.demo.adapter.CilipViewAdapter;
 import com.gangzi.demo.utils.ScalePageTransformer;
 import com.gangzi.demo.view.ClipViewPager;

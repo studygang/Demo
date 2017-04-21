@@ -6,17 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.gangzi.demo.VoiceActivity">
+    tools:context="com.gangzi.demo.activity.VoiceActivity">
 
     <Button
         android:id="@+id/bt_file"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="文件模式"/>
+        android:text="播放"/>
     <Button
-        android:id="@+id/bt_byte"
+    android:id="@+id/bt_byte"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="暂停"/>
+    <Button
+        android:id="@+id/bt_stop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="字节流模式"/>
+        android:text="停止"/>
 
 </LinearLayout>

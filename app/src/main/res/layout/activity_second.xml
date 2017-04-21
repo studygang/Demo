@@ -8,7 +8,7 @@
     android:clipChildren="false"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:id="@+id/pager_container"
-    tools:context="com.gangzi.demo.SecondActivity">
+    tools:context="com.gangzi.demo.activity.SecondActivity">
 
     <com.gangzi.demo.view.ClipViewPager
         android:id="@+id/viewpager"
