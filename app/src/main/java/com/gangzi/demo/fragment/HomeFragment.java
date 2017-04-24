@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.gangzi.demo.R;
+import com.gangzi.demo.activity.LBSLocationActivity;
 import com.gangzi.demo.activity.YoudaoQueryActivity;
 import com.gangzi.demo.base.BaseFragment;
 
@@ -29,7 +30,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.bt_float:
-                startActivity(new Intent(getActivity(), YoudaoQueryActivity.class));
+                startActivity(new Intent(getActivity(), LBSLocationActivity.class));
                 break;
         }
     }
