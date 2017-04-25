@@ -103,4 +103,5 @@ dependencies {
     compile 'com.amap.api:search:latest.integration'
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.lovedise:permissiongen:0.0.6'
 }
