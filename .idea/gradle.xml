@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/libzxing" />
+            <option value="$PROJECT_DIR$/payDemoActivity_20" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

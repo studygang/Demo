@@ -86,6 +86,7 @@ dependencies {
     //3D地图so及jar
     //定位功能
     //搜索功能
+    compile files('libs/alipaySdk-20170407.jar')
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
     compile 'com.umeng.analytics:analytics:latest.integration'
@@ -101,7 +102,7 @@ dependencies {
     compile 'com.amap.api:3dmap:latest.integration'
     compile 'com.amap.api:location:latest.integration'
     compile 'com.amap.api:search:latest.integration'
+    compile 'com.lovedise:permissiongen:0.0.6'
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.0.1'
-    compile 'com.lovedise:permissiongen:0.0.6'
 }

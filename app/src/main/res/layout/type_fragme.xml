@@ -7,12 +7,12 @@
               android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60px"
+        android:layout_height="60dp"
         android:padding="5px">
         <com.flyco.tablayout.SegmentTabLayout
             android:id="@+id/stlayout"
-            android:layout_width="150px"
-            android:layout_height="35px"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
             android:layout_centerInParent="true"
             tl:tl_bar_color="#ffffff"
             tl:tl_indicator_color="#ff0000"
