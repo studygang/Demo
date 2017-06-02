@@ -13,4 +13,12 @@ public class LifeFragment extends BaseFragment{
     public View initView() {
         return null;
     }
+
+    @Override
+    protected void onFragmentVisibleChange(boolean isVisible) {
+        super.onFragmentVisibleChange(isVisible);
+        if (isVisible){
+
+        }
+    }
 }
