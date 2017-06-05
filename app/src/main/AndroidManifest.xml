@@ -125,6 +125,8 @@
         <!-- alipay sdk end -->
         <activity android:name=".activity.PayActivity">
         </activity>
+        <activity android:name=".activity.JcaoVideoPlayerActivity">
+        </activity>
     </application>
 
 </manifest>
