@@ -1,2 +1,2 @@
-include ':app', ':libzxing', ':jcvideoplayer-lib', ':JieCaoVideoPlayer'
+include ':app', ':libzxing', ':jcvideoplayer-lib', ':JieCaoVideoPlayer', ':CheckVersionLibSample', ':checkversionlibrary'
 include ':payDemoActivity_20'
