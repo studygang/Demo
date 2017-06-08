@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/checkversionlibrary/checkversionlibrary.iml" filepath="$PROJECT_DIR$/checkversionlibrary/checkversionlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/jcvideoplayer-lib/jcvideoplayer-lib.iml" filepath="$PROJECT_DIR$/jcvideoplayer-lib/jcvideoplayer-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/libzxing/libzxing.iml" filepath="$PROJECT_DIR$/libzxing/libzxing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openDanmakuSample/openDanmakuSample.iml" filepath="$PROJECT_DIR$/openDanmakuSample/openDanmakuSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/opendanmaku/opendanmaku.iml" filepath="$PROJECT_DIR$/opendanmaku/opendanmaku.iml" />
       <module fileurl="file://$PROJECT_DIR$/payDemoActivity_20/payDemoActivity_20.iml" filepath="$PROJECT_DIR$/payDemoActivity_20/payDemoActivity_20.iml" />
     </modules>
   </component>
