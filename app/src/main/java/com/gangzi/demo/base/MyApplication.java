@@ -1,6 +1,8 @@
 package com.gangzi.demo.base;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.res.Resources;
 
 import com.zhy.http.okhttp.OkHttpUtils;
 
@@ -13,10 +15,20 @@ import okhttp3.OkHttpClient;
  */
 
 public class MyApplication extends Application{
+
+    private static MyApplication myApplication;
     @Override
     public void onCreate() {
         super.onCreate();
+        myApplication=this;
         initOkhttp();
+    }
+
+    public static Context getContext(){
+        return myApplication;
+    }
+    public static Resources getAppResources(){
+        return myApplication.getResources();
     }
 
     private void initOkhttp() {

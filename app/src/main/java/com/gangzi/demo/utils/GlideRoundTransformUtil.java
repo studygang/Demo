@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
+
 /**
  * description:glide转换圆角图片
  * Created by xsf

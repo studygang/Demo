@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DecodeFormat;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.lvr.livecircle.R;
+import com.gangzi.demo.R;
 
 import java.io.File;
 
@@ -63,6 +63,7 @@ public class ImageLoaderUtils {
         }
         Glide.with(context).load(url).asBitmap()
                 .format(DecodeFormat.PREFER_ARGB_8888)
+                .fitCenter()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .placeholder(R.drawable.ic_image_loading)
                 .error(R.drawable.ic_empty_picture)
@@ -85,8 +86,8 @@ public class ImageLoaderUtils {
         }
         Glide.with(context).load(url)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .error(R.drawable.toux2)
-                .centerCrop().transform(new GlideRoundTransformUtil(context)).into(imageView);
+                .error(R.drawable.ic_empty_picture).
+                centerCrop().transform(new GlideRoundTransformUtil(context)).into(imageView);
     }
 
 }
